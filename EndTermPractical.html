@@ -7,10 +7,10 @@
 <style>
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
   }
 
 nav{
@@ -18,65 +18,68 @@ nav{
   background: black;
   color: white;
   padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   }
 
 .shopeasy{
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   }
 
 .menu{
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 24px;
-  font-size: 18px;
-  }
-.menu li{
-  cursor: pointer;
+  font-size: 19px;
   }
 
 .right-icons{
   display: flex;
   align-items: center;
-  gap: 18px;
-  font-size: 18px;
+  font-size: 19px;
+  gap: 19px;
   }
+  
+  .menu li{
+  cursor: pointer;
+  }
+
 #menuToggle{
   display: none;
   }
 
 .hamburger{
   display: none;
-  font-size: 30px;
-  cursor: pointer;
-  margin: 0 20px;
-  user-select: none;
   }
 
  @media (max-width: 765px){
 
  .menu{
    display: none;
+   width: 100%;
    flex-direction: column;
    background: black;
-   width: 100%;
    position: absolute;
-   top: 60px;
-   left: 0;
-   padding: 15px 0;
    text-align: center;
+   top: 58px;
+   left: 0;
+   padding: 14px 0;
+   
+   }
+
+ .hamburger{
+   display: block;
+   font-size: 28px;
+   cursor: pointer;
+   user-select: none;
+   margin: 0 20px;
    }
 
 #menuToggle:checked ~ .menu{
    display: flex;
-   }
-
-.hamburger{
-   display: block;
    }
 
 .menu li{
@@ -92,6 +95,7 @@ nav{
 <nav>
     
     <div class="shopeasy">ShopEase</div> 
+    
     <input type="checkbox" id="menuToggle">
     <label for="menuToggle" class="hamburger">☰</label>
     <ul class="menu">
